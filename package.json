@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss-cli": "^10.1.0",
+    "postcss-color-alpha": "^2.0.0"
+  }
+}

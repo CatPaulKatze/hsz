@@ -1,0 +1,55 @@
+{{ define "main-top"}}
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#1144d1;">A</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#11e2b5;">K</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#11d121;">T</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#bbff00;">U</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffee01;">E</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffaf01;">L</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffaf01;">L</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ff7301;">E</a>
+    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ff4901;">S</a>
+{{ end }}
+
+{{ define "main"}}
+    <style>           
+        .Titeltitel {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #aaa;
+            line-height: 0%;
+        }      
+        .Utiteltitel {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5FC1E4;
+        }
+    </style>
+    <table width="auto" border="0">
+        <tbody>
+            {{ range .Site.Data.blogs }}
+                <tr>
+                    <td width="400" valign="top" align="center"> 
+                        <img src="img/{{.img}}.png" vspace="20" hspace="20" border="0">
+                    </td>
+                    <td valign="top" align="left">
+                        <p class="Utiteltitel">
+                            <br>
+                        </p>
+                        <p class="Titeltitel">{{.title}}
+                            <br>
+                        </p>
+                        <p class="Utiteltitel">{{.description}}, {{.klasse}}
+                            <br>
+                        </p>
+                        <p class="Utiteltitel">
+                            <br>
+                        <a href="hsz_aktuell_einzel.php?bearb=427" style="color: #0376A8; text-decoration: none;"> &gt;&gt; zum Bericht </a> 
+                        </p>
+                    </td>
+                </tr>
+            {{ end }}
+        </tbody>
+    </table>
+{{ end }}

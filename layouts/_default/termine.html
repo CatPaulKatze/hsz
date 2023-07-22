@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termine</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+{{ define "main" }}
+
+<table class="table">
+    <tr>
+        <th><center>Was?</center></th>
+        <th><center>Datum</center></th>
+        <th><center>Beschreibung</center></th>
+    </tr>
+    {{ range .Site.Data.termine }}
+    <tr>
+        <td>
+            <center>{{.title}}</center>
+        </td>
+        <td>
+            <center>{{.date}}</center>
+        </td>
+        <td>
+            <center>{{.description}}</center>
+        </td>
+    </tr>
+    {{ end }}
+</table>
+{{ end }}
