@@ -2,6 +2,7 @@
 <html>
 
     <head>
+        {{ $a42 := resources.Get "img/slideshow/a42.jpg" }}
         <title>HSZ</title>
         {{ $opts := dict "use" "autoprefixer postcss-color-alpha" }}
         {{ with resources.Get "css/style.css" | postCSS $opts }}
@@ -12,25 +13,32 @@
             <link rel="stylesheet" href="{{ .RelPermalink }}">
         {{ end }}
         
+        <style>
+            .logo-image {
+                background-image: url("{{ $a42.RelPermalink }}");
+            }
+        </style>
+        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
-        <link rel="icon" href="pictures/icons/icon.ico">
+        {{ $icon := resources.Get "img/icon.ico" }}
+        <link rel="icon" href="{{ $icon.RelPermalink }}">
     </head>
 
     <body>
         <div id="main-wrapper">
-            <div id="aktuell"><a href="/" style="color: white;"><span class="material-symbols-outlined" id="btnside">home</span></a></div>
+            <div id="aktuell"><a href="/hsz" style="color: white;"><span class="material-symbols-outlined" id="btnside">home</span></a></div>
             <div id="lehrer">
                 <nav class="navbar">
 	                <ul>
 		                <li>
                             <a><span class="material-symbols-outlined" id="btnside">groups</span></a>
 			                <ul>
-				                <li><a href="/schuelerinnen">SCHÜLERINNEN</a></li>
-				                <li><a href="/lehrerinnen">LEHRERINNEN</a></li>
-				                <li><a href="/schulpartner">SCHULPARTNER</a></li>
-                                <li><a href="/absolventinnen">ABSOLVENTINNEN</a></li>
-                                <li><a href="/erinnerungen">ERINNERUNGEN</a></li>
+				                <li><a href="/hsz/team/schuelerinnen">SCHÜLERINNEN</a></li>
+				                <li><a href="/hsz/team/lehrerinnen">LEHRERINNEN</a></li>
+				                <li><a href="/hsz/team/schulpartner">SCHULPARTNER</a></li>
+                                <li><a href="/hsz/team/absolventinnen">ABSOLVENTINNEN</a></li>
+                                <li><a href="/hsz/team/erinnerungen">ERINNERUNGEN</a></li>
 			                </ul>
 		                </li>
 	                </ul>
@@ -42,9 +50,9 @@
 		                <li>
                             <a><span class="material-symbols-outlined" id="btnside">school</span></a>
 			                <ul>
-				                <li><a href="#">LEITBILD</a></li>
-				                <li><a href="#">SCHULPROFIL</a></li>
-				                <li><a href="#">GESUNDE JAUSE</a></li>
+				                <li><a href="/hsz/schule/leitbild">LEITBILD</a></li>
+				                <li><a href="/hsz/schule/schulprofil">SCHULPROFIL</a></li>
+				                <li><a href="/hsz/schule/gesunde-jause">GESUNDE JAUSE</a></li>
 			                </ul>
 		                </li>
 	                </ul>
@@ -56,10 +64,10 @@
 		                <li>
                             <a><span class="material-symbols-outlined" id="btnside">domain</span></a>
 			                <ul>
-				                <li><a href="/termine">TERMINE</a></li>
-				                <li><a href="#">SCHULARBEITSTERMINE</a></li>
-				                <li><a href="#">STUNDENPLAN</a></li>
-                                <li><a href="#">FORMULARE</a></li>
+				                <li><a href="/hsz/organisation/termine">TERMINE</a></li>
+				                <li><a href="/hsz/organisation/schularbeitstermine">SCHULARBEITSTERMINE</a></li>
+				                <li><a href="/hsz/organisation/stundenplan">STUNDENPLAN</a></li>
+                                <li><a href="/hsz/organisation/formulare">FORMULARE</a></li>
 			                </ul>
 		                </li>
 	                </ul>
@@ -84,7 +92,7 @@
             <div id="intern"><a href="intern.php"><span class="material-symbols-outlined" id="btnside">Captive_Portal</span></a></div>
             <div id="btext">Demnächst</div>
             <div id="fetured">fetured</div>
-            <div id="datenschutz"><a href="https://bildung.bmbwf.gv.at/schulen/datenschutz/index.html"><span class="material-symbols-outlined" id="btnside">policy</span></a></div>
+            <div id="datenschutz"><a href=""><span class="material-symbols-outlined" id="btnside">policy</span></a></div>
             <div id="name-bild" class="logo-image">
                 <center>
                     <div class="logos">

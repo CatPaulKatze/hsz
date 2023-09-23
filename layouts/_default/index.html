@@ -1,13 +1,5 @@
 {{ define "main-top"}}
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#1144d1;">A</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#11e2b5;">K</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#11d121;">T</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#bbff00;">U</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffee01;">E</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffaf01;">L</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ffaf01;">L</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ff7301;">E</a>
-    <a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#ff4901;">S</a>
+<center><a style="font-size: 70px; gap: 0px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color: #369BC9">AKTUELLES</a></center>
 {{ end }}
 
 {{ define "main"}}
@@ -20,6 +12,12 @@
             line-height: 0%;
         }      
         .Utiteltitel {
+            font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            color: #5FC1E4;
+        }
+        .Utiteltitel2 {
             font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
             font-size: 14px;
             font-weight: bold;
@@ -40,11 +38,12 @@
                         <p class="Titeltitel">{{.title}}
                             <br>
                         </p>
-                        <p class="Utiteltitel">{{.description}}, {{.klasse}}
+                        <p class="Utiteltitel2">{{.description}}
                             <br>
+                            {{.klasse}}
                         </p>
                         <p class="Utiteltitel">
-                            <br>
+                            
                         <a href="hsz_aktuell_einzel.php?bearb=427" style="color: #0376A8; text-decoration: none;"> &gt;&gt; zum Bericht </a> 
                         </p>
                     </td>

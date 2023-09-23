@@ -14,11 +14,11 @@ body {
     "none1 lehrer name-bild none"
     "none1 🏫 name-bild none"
     "none1 infra name-bild none"
-    "none1 links name-bild none"
-    "none1 chronik name-bild none"
-    "none1 impressum name-bild none"
-    "none1 intern name-bild none"
-    "none1 btext b2text none"
+    "none1 links b2text none"
+    "none1 chronik ℹ️ none"
+    "none1 impressum ℹ️ none"
+    "none1 intern ℹ️ none"
+    "none1 btext ℹ️ none"
     "none1 fetured ℹ️ none"
     "none1 datenschutz ℹ️ none"
     "none1 none10 ℹ️ none"
@@ -166,12 +166,14 @@ a {
     width: 100%;
     max-width: 650px;
     height: 100%;
+    opacity: 80%;
 }
 
 .logo_front2 {
     width: 100%;
     max-width: 150px;
     height: 100%;
+    opacity: 80%;
 }
 
 #unesco {
@@ -183,8 +185,7 @@ a {
 }
 
 .logo-image {
-    background-image: url("data1/images/a42.jpg");
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat, no-repeat;
     background-size: 100%;
 }
 
@@ -192,6 +193,5 @@ a {
     width: 70%;
     height: 70%;
 	padding:30px;
-	background: rgba(11,23,33,0.4);
 	text-align:center;
 }

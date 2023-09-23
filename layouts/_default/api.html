@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+{{ define "main"}}
+
+    {{ $apientrys := getJSON "http://localhost:80/api-entrys" }}
+<div class="container">
+    <table class="table">
+        <tr>
+            <th>Token</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>time</th>
+            <th>URL</th>
+        </tr>
+        {{ range $apientrys }}
+        <tr>
+            <td>
+                {{.token}}
+            </td>
+            <td>
+                {{.name}}
+            </td>
+            <td>
+                {{ dateFormat "02. Jan 2006" .date }}
+            </td>
+            <td>
+                {{.time}}
+            </td>
+            <td>
+                {{.url}}
+            </td>
+        </tr>
+        {{ end }}
+    </table>
+</div>
+
+{{ end }}
