@@ -1,9 +1,28 @@
 body {
-    background-color: #1C1B22;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+
+.light-theme {
+    --text-color: #1C1B22;
+    --background-color: white;
+}
+
+:root {
+    --text-color: white;
+    --background-color: #1C1B22;
+}
+
+a {
+    color: var(--text-color);
+}
+
+span {
+   color: var(--text-color);
 }
 
 #main-wrapper {
-    color: white;
     display: grid;
     gap: 1rem;
     grid-template-columns: 0.125% 80px auto 0.125%;
@@ -14,7 +33,8 @@ body {
     "none1 lehrer name-bild none"
     "none1 🏫 name-bild none"
     "none1 infra name-bild none"
-    "none1 links b2text none"
+    "none1 links name-bild none"
+    "none1 colortheme b2text none"
     "none1 chronik ℹ️ none"
     "none1 impressum ℹ️ none"
     "none1 intern ℹ️ none"
@@ -26,7 +46,7 @@ body {
     margin: auto;
 }
 
-#aktuell, #lehrer, #schule, #infra, #links, #chronik, #impressum, #intern, #intern, #name-bild, #btext, #b2text, #ℹ️, #fetured, #info, #webdesign, #datenschutz {
+#aktuell, #lehrer, #schule, #infra, #links, #chronik, #impressum, #intern, #intern, #name-bild, #btext, #b2text, #ℹ️, #fetured, #info, #webdesign, #datenschutz, #colortheme {
     outline: 1.5px solid;
     outline-color: #414049;
     text-decoration: none;
@@ -34,7 +54,7 @@ body {
     height: 100%;
 }
 
-#aktuell, #lehrer, #schule, #infra, #links, #chronik, #impressum, #intern, #datenschutz {
+#aktuell, #lehrer, #schule, #infra, #links, #chronik, #impressum, #intern, #datenschutz, #colortheme {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,73 +64,60 @@ body {
 
 #aktuell {
     grid-area: 🏠;
-    color: white;
 }
 #lehrer {
     grid-area: lehrer;
-    color: white;
 }
 #schule {
     grid-area: 🏫;
-    color: white;
 }
 #infra {
     grid-area: infra;
-    color: white;
 }
 #links {
     grid-area: links;
-    color: white;
+}
+#colortheme {
+    grid-area: colortheme;
 }
 #chronik {
     grid-area: chronik;
-    color: white;
 }
 #impressum {
     grid-area: impressum;
-    color: white;
 }
 #intern {
     grid-area: intern;
-    color: white;
 }
 #name-bild {
     grid-area: name-bild;
-    color: white;
 }
 #btext {
     grid-area: btext;
-    color: white;
     font-size: 17px;
     font-weight: normal;
 }
 #b2text {
     grid-area: b2text;
-    color: white;
     font-size: 17px;
     font-weight: normal;
 }
 #ℹ️ {
     grid-area: ℹ️;
-    color: white;
 }
 #fetured {
     grid-area: fetured;
-    color: white;
     font-size: 17px;
     font-weight: normal;
 }
 #info {
     grid-area: info;
-    color: white;
 }
 #webdesign {
     grid-area: webdesign;
-    color: white;
 }
 #datenschutz {
     grid-area: datenschutz;
-    color: white;
 }
 
 
@@ -130,7 +137,6 @@ body {
 }
 
 .navbar li a {
-    color: white;
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -155,10 +161,13 @@ body {
 
 .navbar ul ul li a:hover {
     background-color: #555;
+    color: white;
+}
+.navbar ul ul li a {
+    color: white;
 }
 
 a {
-    color: white;
     text-decoration: none
 }
 
@@ -176,10 +185,6 @@ a {
     opacity: 80%;
 }
 
-#unesco {
-    color: white;
-}
-
 #btnside {
     font-size: 380%;
 }
@@ -194,4 +199,8 @@ a {
     height: 70%;
 	padding:30px;
 	text-align:center;
+}
+
+#colorbutton {
+    font-size: 380%;
 }
