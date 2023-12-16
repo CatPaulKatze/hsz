@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        {{ $a42 := resources.Get "img/slideshow/a42.jpg" }}
+        
         <title>HSZ</title>
         {{ $opts := dict "use" "autoprefixer postcss-color-alpha" }}
         {{ with resources.Get "css/style.css" | postCSS $opts }}
@@ -15,7 +15,7 @@
         
         <style>
             .logo-image {
-                background-image: url("{{ $a42.RelPermalink }}");
+                
             }
         </style>
         
