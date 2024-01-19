@@ -1,4 +1,5 @@
 # HSZ
+curently updating to Typescript
 ## This is a Webserver for my school 
 
 
